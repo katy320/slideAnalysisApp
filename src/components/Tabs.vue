@@ -1,3 +1,6 @@
+<!--This page is for the Analyze/Results Tab functionalties & styles.
+@click is onclick.
+:class is binding a class to manipulate an element’s class list and its inline styles.-->
 <template>
     <div class="Tabs">
        <div
@@ -16,6 +19,8 @@
     </div>
 </template>
 
+<!--import is to let this file know where the other related files are coming from.
+export is where you write the data functions and methods.-->
 <script>
 import EventBus from "@/EventBus.js"
 
@@ -38,6 +43,7 @@ export default {
 }
 </script>
 
+<!--here is where the CSS goes-->
 <style scoped>
     .Tabs {
         height: 50px;
@@ -52,7 +58,6 @@ export default {
         margin-left: auto;
         margin-right: auto;
     }
-
 
     .TabButton {
         line-height: 50px;

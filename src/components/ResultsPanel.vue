@@ -1,3 +1,6 @@
+<!--This page is for writing the functionalities behind viewing the Results 
+when the backend completes analyzing the images.
+v-for is a loop function-->
 <template>
     <div class="ResultsPanel">
         <div class="tableHeaders">
@@ -14,6 +17,8 @@
     </div>
 </template>
 
+<!--import is to let this file know where the other related files are coming from.
+export is where you write the components and data functions.-->
 <script>
 import ResultRow from "@/components/ResultRow"
 
@@ -29,6 +34,7 @@ export default {
 }
 </script>
 
+<!--This is where the CSS goes-->
 <style scoped>
     .ResultsPanel {
         background-color: white;

@@ -1,3 +1,6 @@
+<!--This page deals with the entire desktop body area.
+v-if & v-else are if/else statements controlling the view 
+of the body area depending on which tab is clicked-->
 <template>
     <div class="AppBody">
         <Tabs />
@@ -7,6 +10,8 @@
     </div>
 </template>
 
+<!--import is to let this file know where the other related files are coming from.
+export is where you write the components and data functions.-->
 <script>
 import Tabs from "@/components/Tabs"
 import AnalyzePanel from "@/components/AnalyzePanel"
@@ -33,6 +38,7 @@ import EventBus from "@/EventBus.js"
     
 </script>
 
+<!--This is where the CSS goes-->
 <style scoped>
     .AppBody {
         background-color: var(--light-gray);

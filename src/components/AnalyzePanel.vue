@@ -1,3 +1,11 @@
+<!--This is the home landing screen for the desktop app.
+It contains the image icon and (Add Image) button inside the body if the screen is empty.<style scoped>
+It contains a progress bar if images are being uploaded, 
+and the (Add Image) button will be moved to the button bar area below.
+</style>
+
+-->
+</style>
 <template>
     <div class="AnalyzePanel">
         <img src = "@/assets/image.png" height =100px width=100px/>
@@ -6,12 +14,12 @@
     </div>
 </template>
 
+<!--This is where functionalities for the Analyze tab goes.-->
 <script>
-    export default {
-        
-    }
+    export default {}
 </script>
 
+<!--This is where the CSS goes-->
 <style scoped>
     .AnalyzePanel {
         background-color: white;

@@ -1,3 +1,7 @@
+<!--This is where the bottom button navigation lies.<style scoped>
+Depending on the which tab(analyze/results) you're in, the bottom buttons differ.<style scoped>
+It will be either (Analyze) / (Add Images)(Analyze) / (Prev)(Next)(Done)
+v-if & v-else are if/else statements-->
 <template>
     <div class="ButtonsBar">
         <span>left stuff</span>
@@ -9,6 +13,8 @@
     </div>
 </template>
 
+<!--import is to let this file know where the other related files are coming from.
+export is where you write the functions and event handlers-->
 <script>
 import EventBus from "@/EventBus.js"
 
@@ -24,6 +30,7 @@ export default {
 }
 </script>
 
+<!--This is where the CSS goes-->
 <style scoped>
    .ButtonsBar {
         height: 50px;
@@ -37,6 +44,7 @@ export default {
         margin-left: auto;
         margin-right: auto;
    }
+
     button {
         --height: 40px;
         height: var(--height);
@@ -48,6 +56,7 @@ export default {
         box-shadow: 0px 1px 7px -1px;
         outline: none;
     }
+
     .addimagesbtn {
         width: 120px;
         color: var(--blue);

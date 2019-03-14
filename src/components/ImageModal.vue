@@ -1,3 +1,6 @@
+<!--After clicking the eyeIcon popup, 
+this is where you edit the functionality of the image modal popup.
+@click is onclick anywhere outside of the image screen, the popup closes.-->
 <template>
     <div class="ImageModal background" @click="onPopupClose">
         <div class="body">
@@ -6,6 +9,7 @@
     </div>
 </template>
 
+<!--export is where you write the functions and methods.-->
 <script>
 export default {
     methods:  {
@@ -16,6 +20,7 @@ export default {
 }
 </script>
 
+<!--This is where the CSS goes-->
 <style scoped>
     .ImageModal {
         position: fixed;

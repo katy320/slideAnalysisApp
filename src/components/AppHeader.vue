@@ -1,3 +1,5 @@
+<!--This page holds the header which contains the project icon, the title "Digital Pathology" 
+and the EXIT button to close the desktop app.-->
 <template>
     <div class="AppHeader">
         <img src="@/assets/logo.png" width=69px height=69px/>
@@ -6,11 +8,13 @@
     </div>
 </template>
 
+<!--This is where functionalities for the header area goes.-->
 <script>
     export default {}
 
 </script>
 
+<!--This is where the CSS goes-->
 <style scoped>
     .AppHeader { 
         background-color: var(--blue);

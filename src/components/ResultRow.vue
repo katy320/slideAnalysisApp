@@ -1,3 +1,5 @@
+<!--This is where you edit each result row's output view and functionality.
+You have to edit the eyeIcon pop up here.-->
 <template>
     <div class="ResultRow">
 
@@ -12,6 +14,8 @@
     </div>
 </template>
 
+<!--import is to let this file know where the other related files are coming from.
+export is where you write the methods and other functionalities-->
 <script>
 import EventBus from "@/EventBus.js"
 
@@ -24,6 +28,7 @@ export default {
 }
 </script>
 
+<!--This is where the CSS goes-->
 <style scoped>
 
     td {
@@ -45,4 +50,3 @@ export default {
     }
 
 </style>
-
