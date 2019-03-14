@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import EventBus from "@/EventBus.js"
 
 export default {
     data() {
@@ -27,11 +28,11 @@ export default {
     methods: {
         activateAnalyze() {
             this.activeTab = "analyze"
-            this.$emit("setPanel", "AnalyzePanel")
+            EventBus.$emit("setPanel", "AnalyzePanel")
         },
         activateSaved() {
             this.activeTab = "saved"
-            this.$emit("setPanel", "ResultsPanel")
+            EventBus.$emit("setPanel", "ResultsPanel")
         }
     }
 }

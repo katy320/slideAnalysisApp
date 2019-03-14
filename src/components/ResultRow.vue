@@ -1,19 +1,26 @@
 <template>
     <div class="ResultRow">
 
-        <div class="index">Index Number</div>
-        <div class="filename">File Name</div>
-        <div class="count">Eosinophil Count</div>
+        <div class="index">Number</div>
+        <div class="filename">Name</div>
+        <div class="count">Count</div>
 
         <div class="eyebtn">
-            <fa-icon icon="eye" />
+            <fa-icon icon="eye" @click="onImagePopup"/>
         </div>
      
     </div>
 </template>
+
 <script>
+import EventBus from "@/EventBus.js"
+
 export default {
-    
+    methods: {
+        onImagePopup() {
+            EventBus.$emit("onImagePopup")
+        }
+    }
 }
 </script>
 
@@ -31,6 +38,10 @@ export default {
         margin-top: 10px;
         margin-bottom: 10px;
         border-bottom: 1px solid var(--light-gray);
+    }
+
+    .eyebtn {
+        cursor: pointer;
     }
 
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div class="AppBody">
-        <Tabs @setPanel="setPanel" />
+        <Tabs />
         <AnalyzePanel v-if="currentTab === 'AnalyzePanel'" />
         <ResultsPanel v-else />
         <ButtonsBar/>
@@ -12,11 +12,11 @@ import Tabs from "@/components/Tabs"
 import AnalyzePanel from "@/components/AnalyzePanel"
 import ResultsPanel from "@/components/ResultsPanel"
 import ButtonsBar from "@/components/ButtonsBar"
+import EventBus from "@/EventBus.js"
 
     export default {
         data() {
             return {
-                buttonName: "analyze",
                 currentTab: "AnalyzePanel"
             }
         },
@@ -26,10 +26,8 @@ import ButtonsBar from "@/components/ButtonsBar"
             ResultsPanel,
             ButtonsBar
         },
-        methods: {
-            setPanel(event) {
-                this.currentTab = event
-            }
+        created() {
+            EventBus.$on("setPanel", event => this.currentTab = event )
         }
     }
     

@@ -2,14 +2,25 @@
     <div class="ButtonsBar">
         <span>left stuff</span>
         <span>
-            <button >Action</button>
+            <button class="addimagesbtn" v-if="currentTab === 'AnalyzePanel'">Add Images</button>
+            <button v-if="currentTab === 'AnalyzePanel'">Analyze</button>
+            <button v-else>Done</button>
         </span>
     </div>
 </template>
 
 <script>
+import EventBus from "@/EventBus.js"
+
 export default {
-    
+    data() {
+        return {
+            currentTab: "AnalyzePanel"
+        }
+    },
+    created() {
+        EventBus.$on("setPanel", event => this.currentTab = event )
+    }    
 }
 </script>
 
@@ -36,5 +47,10 @@ export default {
         color: white;
         box-shadow: 0px 1px 7px -1px;
         outline: none;
+    }
+    .addimagesbtn {
+        width: 120px;
+        color: var(--blue);
+        background-color: white;
     }
 </style>

@@ -1,18 +1,35 @@
 <template>
   <div id="app">
-  <AppHeader/>
-  <AppBody/>
+    <AppHeader/>
+    <AppBody/>
+    <ImageModal v-if="showImageModal" @onPopupClose="hideImageModal"/>
   </div>
 </template>
 
 <script>
 import AppHeader from "@/components/AppHeader"
 import AppBody from "@/components/AppBody"
+import ImageModal from "@/components/ImageModal"
+import EventBus from "@/EventBus.js"
 
 export default {
   components: {
     AppHeader,
-    AppBody
+    AppBody,
+    ImageModal
+  },
+  data() {
+    return {
+      showImageModal: false
+    }
+  },
+  methods: {
+    hideImageModal() {
+      this.showImageModal = false
+    }
+  },
+  created() {
+    EventBus.$on("onImagePopup", () => this.showImageModal = true)
   }
 }
 </script>
