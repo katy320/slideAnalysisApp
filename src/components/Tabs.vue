@@ -11,7 +11,7 @@
         @click="activateSaved"
         class="TabButton"
         :class="{isActive: activeTab === 'saved' }">
-        Saved Slides
+        Results
         </div>
     </div>
 </template>
@@ -27,11 +27,11 @@ export default {
     methods: {
         activateAnalyze() {
             this.activeTab = "analyze"
-            this.$emit("setPanel", "ImagePanel")
+            this.$emit("setPanel", "AnalyzePanel")
         },
         activateSaved() {
             this.activeTab = "saved"
-            this.$emit("setPanel", "SavedPanel")
+            this.$emit("setPanel", "ResultsPanel")
         }
     }
 }
@@ -42,7 +42,7 @@ export default {
         height: 50px;
         width: var(--panelWidth);
         border-radius: 3px;
-        background-color: var(--blue);
+        background-color: white;
         font-size: 16px;
         text-align: center;
         display: grid;
@@ -54,15 +54,13 @@ export default {
 
 
     .TabButton {
-        height: 50px;
-        background-color: white;
-        height: 100%;
+        line-height: 50px;
         box-shadow: 0px 1px 7px -1px;
         border-radius: 3px;
     }
 
     .isActive {
-        height: 90%;
+        border-bottom: 3px solid var(--blue);
     }
 
 </style>

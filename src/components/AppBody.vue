@@ -1,30 +1,30 @@
 <template>
     <div class="AppBody">
         <Tabs @setPanel="setPanel" />
-        <ImagePanel v-if="currentTab === 'ImagePanel'" />
-        <SavedPanel v-else />
-        <AnalyzeButton/>
+        <AnalyzePanel v-if="currentTab === 'AnalyzePanel'" />
+        <ResultsPanel v-else />
+        <ButtonsBar/>
     </div>
 </template>
 
 <script>
 import Tabs from "@/components/Tabs"
-import AnalyzeButton from "@/components/AnalyzeButton"
-import ImagePanel from "@/components/ImagePanel"
-import SavedPanel from "@/components/SavedPanel"
+import AnalyzePanel from "@/components/AnalyzePanel"
+import ResultsPanel from "@/components/ResultsPanel"
+import ButtonsBar from "@/components/ButtonsBar"
 
     export default {
         data() {
             return {
                 buttonName: "analyze",
-                currentTab: "ImagePanel"
+                currentTab: "AnalyzePanel"
             }
         },
         components: {
             Tabs,
-            AnalyzeButton,
-            ImagePanel,
-            SavedPanel
+            AnalyzePanel,
+            ResultsPanel,
+            ButtonsBar
         },
         methods: {
             setPanel(event) {

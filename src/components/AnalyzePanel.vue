@@ -1,5 +1,5 @@
 <template>
-    <div class="ImagePanel">
+    <div class="AnalyzePanel">
         <img src = "@/assets/image.png" height =100px width=100px/>
         <br>
         <button> Add Images </button>
@@ -13,7 +13,7 @@
 </script>
 
 <style scoped>
-    .ImagePanel {
+    .AnalyzePanel {
         background-color: white;
         height: 400px;
         width: var(--panelWidth);
