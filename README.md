@@ -2,6 +2,11 @@
 
 ## HOW TO INSTALL ELECTRON
 ```
+npm install electron
+```
+
+If you encounter issues with permissions, try:
+```
 sudo npm install -g electron --unsafe-perm=true --allow-root
 ```
 
