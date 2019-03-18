@@ -1,5 +1,10 @@
 # desktopapp
 
+## HOW TO INSTALL ELECTRON
+```
+sudo npm install -g electron --unsafe-perm=true --allow-root
+```
+
 ## Project setup
 ```
 npm install
